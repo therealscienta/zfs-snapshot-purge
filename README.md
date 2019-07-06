@@ -1,7 +1,9 @@
 # zfs
 zfs purging script
 
-The script is intended to be run as a cron-job and output should be sent to log-file.
+Syncing ZFS snapshots with Syncoid creates endless snapshots on target system and the 
+purpose of this script is to purge old snapshots. The script is intended to be run as 
+a cron-job and output should be sent to log-file.
 
 Create and move script to directory:
 >mkdir /var/script
