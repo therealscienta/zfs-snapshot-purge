@@ -7,6 +7,7 @@ a cron-job and output should be sent to log-file.
 
 Create and move script to directory:
 >mkdir /var/script
+
 >mv zfs_auto-snap_purge_script.py /var/script
 
 Edit crontab via:
