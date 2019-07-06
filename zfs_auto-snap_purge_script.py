@@ -2,7 +2,7 @@
 
 #The script is intended to be run as a cron-job 
 #and output should be sent to log-file, 
-#i.e. zfs_auto-snap_purge_script >> /var/log/zfs_purge.log
+#e.g. zfs_auto-snap_purge_script >> /var/log/zfs_purge.log
 
 import os
 import datetime
