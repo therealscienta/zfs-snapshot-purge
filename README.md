@@ -11,4 +11,4 @@ Edit crontab via:
 >crontab -e
 
 Add (will run script at 1am, can be changed to user preference):
-0 1 * * * zfs_auto-snap_purge_script >> /var/log/zfs_purge.log
+>0 1 * * * zfs_auto-snap_purge_script >> /var/log/zfs_purge.log
