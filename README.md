@@ -10,6 +10,8 @@ Create and move script to directory:
 
 >mv zfs_auto-snap_purge_script.py /var/script
 
+>chmod +x zfs_auto-snap_purge_script.py
+
 Edit crontab via:
 >crontab -e
 
