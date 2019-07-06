@@ -42,7 +42,9 @@ def destroy(inputlist,test_val,max_val):
                 for snap in inputlist:
                         if time_test(snap, test_val) >= max_val:
                                 print("Snapshot {snap} will be destroyed".format(snap=snap))
-                                #destroy shit
+                                #### Destroy snapshot ####
+                                os.system('zfs destroy ' + snap)
+                                
         else:
                 if test_val == 1:
                         print("\nNo hourly snapshots found.\n")
