@@ -11,9 +11,12 @@ import datetime
 now = datetime.datetime.now()
 print(now)
 
+#To make the script work with cron, we need to specify path for zfs. Run >which zfs to find from where it is run
+zfs = "/sbin/zfs"
+
 #Function that fetches current snapshots into a list
 def fetch(grepfor):
-        fetch_list = os.popen('zfs list -t snapshot | grep ' + grepfor).read().split("\n")
+        fetch_list = os.popen(zfs + ' list -t snapshot | grep ' + grepfor).read().split("\n")
         return_list = [n.split()[0] for n in fetch_list[:-1]]
         return return_list
 
@@ -43,7 +46,7 @@ def destroy(inputlist,test_val,max_val):
                         if time_test(snap, test_val) >= max_val:
                                 print("Snapshot {snap} will be destroyed".format(snap=snap))
                                 #### Destroy snapshot ####
-                                os.system('zfs destroy ' + snap)
+                                os.system(zfs + ' destroy ' + snap)
                                 
         else:
                 if test_val == 1:
