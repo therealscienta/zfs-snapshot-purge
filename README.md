@@ -18,7 +18,7 @@ Edit crontab via:
 Add (will run script at 1am, can be changed to user preference):
 >0 1 * * * /var/script/zfs_auto-snap_purge_script.py >> /var/log/zfs_purge.log
 
-2019-07-07 Update:
+**2019-07-07 Update:
 
-*Added option to specify dry run. Run v2-script with:
+Added option to specify dry run. Run v2-script with:
 >./zfs_autp-snap_purge_script_v2.py -vn
